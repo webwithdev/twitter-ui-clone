@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="output.css" />
+  <meta name="color-scheme" content="light dark">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter-pip.3.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {},
+      },
+      corePlugins: {
+        lineClamp: true, // enable built-in line-clamp utilities
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="flex h-screen">
+    <div class="first lg:w-[25%] md:w-[10%] sm:w-[15%] flex justify-end max-[500px]:hidden ">
+      <div class="mx-auto  md:right-0 transition duration-200 ease-in">
+        <div class="md:right-0  transition duration-200 ease-in">
+          <div class="py-3 mx-auto">
+            <svg viewBox="0 0 24 24" aria-hidden="true"
+              class="r-4qtqp9 r-yyyyoo r-dnmrzs w-8 r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk fill-white">
+              <g>
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                </path>
+              </g>
+            </svg>
+          </div>
+          <ul class="icons text-white mx-auto w-full text-[22px]">
+            <li class="flex items-center hover:bg-[#1f1f1f] md:w-fit transition duration-200 ease-in-out w-fit hover:cursor-pointer my-2 p-2 ">
+              <span class="material-symbols-outlined">home</span>
+              <span class="mx-5 hidden xl:block lg:block ">Home</span>
+            </li>
+            <li class="flex items-center hover:bg-[#1f1f1f] md:w-fit transition duration-200 ease-in-out w-fit hover:cursor-pointer my-2 p-2">
+              <span class="material-symbols-outlined">search</span>
+              <span class="mx-5 hidden xl:block lg:block ">Explore</span>
+            </li>
+            <li class="flex items-center hover:bg-[#1f1f1f] md:w-fit transition duration-200 ease-in-out w-fit hover:cursor-pointer my-2 p-2">
+              <span class="material-symbols-outlined">notifications</span>
+              <span class="mx-5 hidden xl:block lg:block ">Notifications</span>
+            </li>
+            <li class="flex items-center hover:bg-[#1f1f1f] md:w-fit transition duration-200 ease-in-out w-fit hover:cursor-pointer my-2 p-2">
+              <span class="material-symbols-outlined">mail</span>
+              <span class="mx-5 hidden xl:block lg:block ">Messages</span>
+            </li>
+            <li class="flex items-center hover:bg-[#1f1f1f] md:w-fit transition duration-200 ease-in-out w-fit hover:cursor-pointer my-2 p-2">
+              <span class="material-symbols-outlined">bolt</span>
+              <span class="mx-5 hidden xl:block lg:block ">Grok</span>
+            </li>
+            <li class="flex items-center hover:bg-[#1f1f1f] md:w-fit transition duration-200 ease-in-out w-fit hover:cursor-pointer my-2 p-2">
+              <span class="material-symbols-outlined">groups</span>
+              <span class="mx-5 hidden xl:block lg:block ">Communities</span>
+            </li>
+
+            <li class="flex items-center hover:bg-[#1f1f1f] md:w-fit transition duration-200 ease-in-out w-fit hover:cursor-pointer my-2 p-2">
+              <span class="material-symbols-outlined">person</span>
+              <span class="mx-5 hidden xl:block lg:block ">Profile</span>
+            </li>
+            <li class="flex items-center hover:bg-[#1f1f1f] md:w-fit transition duration-200 ease-in-out w-fit hover:cursor-pointer my-2 p-2">
+              <span class="material-symbols-outlined">more_horiz</span>
+              <span class="mx-5 hidden xl:block lg:block ">More</span>
+            </li>
+          </ul>
+          <button
+            class="text-black post-btn block bg-white py-3 w-full rounded-full text-lg font-semibold mt-2 hover:opacity-80 max-[1024px]:hidden">Post</button>
+          <div
+            class="flex invisible justify-center items-center bg-white rounded-full md:w-full   transition duration-200 ease-in-out text-xl  max-[1024px]:visible  text-black">
+            <span class="material-symbols-outlined ">add</span>
+          </div>
+          <div class="name w-full rounded-full flex items-center mt-2 ml-2 hover:cursor-pointer hover:bg-[#1f1f1f] p-2 px-3 ease-in-out transition duration-100  max-[1024px]:hidden">
+            <div>
+              <img class="w-16 h-12 rounded-full " 
+                src="https://i.pinimg.com/736x/21/a0/6c/21a06c4dbd317f4d60c1ad55b6cd6488.jpg" alt="logo">
+            </div>
+            <div class="flex justify-between items-center w-full">
+              <div class="ml-3">
+                <h1 class="font-bold">Eunovie</h1>
+                <p class="text-gray-500">@eunovie</p>
+              </div>
+              <div>
+            <span class="material-symbols-outlined">more_horiz</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="second lg:w-[45%] md:w-[80%] overflow-y-auto scrollbar-hide border-gray-700 borderz">
+      <div class="max-w-full flex border-b borderz border-gray-700  bg-black bg-opacity-60  top-0 sticky">
+        <div class="w-full h-14 flex flex-col justify-center items-center">
+          <h1 class="text-white font-bold">For You</h1>
+          <div class="w-10 h-1 bg-blue-400 rounded-full mt-1"></div>
+        </div>
+        <div class="w-full h-14 flex justify-center items-center">
+          <h1 class="text-gray-400">Following</h1>
+        </div>
+      </div>
+      <div class="w-full border-b-1 border-gray-700">
+        <div
+          class="bg-black text-gray-300 p-4 rounded-lg w-full flex gap-3 border-b border-gray-800 max-[500px]:hidden">
+          <div class="flex items-start h-full gap-3">
+            <img src="https://i.pinimg.com/736x/21/a0/6c/21a06c4dbd317f4d60c1ad55b6cd6488.jpg" alt="User Avatar"
+              class="w-12 h-12 rounded-full flex-shrink-0" />
+          </div>
+
+          <div class="flex flex-col items-center w-full justify-between">
+            <div class="w-full py-2 flex items-center pt-3 ">
+              <input type="text" placeholder="What's happening?"
+                class="bg-transparent placeholder:text-xl text-white text-lg w-full outline-none placeholder-gray-500" />
+            </div>
+            <div class="flex w-full justify-between items-center pb-1.5 pt-2">
+              <div class="flex gap-4 mt-5">
+                <img src="https://img.icons8.com/ios-filled/50/1DA1F2/picture.png" alt="Media" class="w-5 h-5" />
+                <img src="https://img.icons8.com/ios-filled/50/1DA1F2/gif.png" alt="GIF" class="w-5 h-5" />
+                <img src="https://img.icons8.com/ios-filled/50/1DA1F2/edit.png" alt="Poll" class="w-5 h-5" />
+                <img src="https://img.icons8.com/ios-filled/50/1DA1F2/smiling.png" alt="Emoji" class="w-5 h-5" />
+                <img src="https://img.icons8.com/ios-filled/50/1DA1F2/camera.png" alt="Camera" class="w-5 h-5" />
+                <img src="https://img.icons8.com/ios-filled/50/1DA1F2/marker.png" alt="Location" class="w-5 h-5" />
+              </div>
+
+              <!-- Post Button -->
+              <button class="text-black bg-white  rounded-full px-5 py-1.5 text-lg font-semibold opacity-45">
+                Post
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="posts">
+        <div class="post h sm:w-fit border-b-1 border-gray-700">
+          <div class="image mx-4 mt-3 flex">
+            <img class="w-9 h-9 rounded-full"
+              src="https://pbs.twimg.com/profile_images/1936002956333080576/kqqe2iWO_400x400.jpg" alt="logo" />
+            <div class="">
+              <div>
+                <span class="text-white hover:underline font-bold mx-2">Elon Musk</span><span
+                  class="text-gray-500 max-[500px]:text-sm">@ElonMusk · Jul 13, 2025</span>
+              </div>
+
+              <div class="mx-2 max-[320px]:text-sm text-white">
+                <p class="line-clamp-2" id="text">Travel anywhere on Earth (that’s willing to allow loud rockets) in
+                  half an hour or so at Mach 25!
+                </p>
+                <button id="toggleBtn" class="text-gray-400 ">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="content flex flex-col justify-start w">
+            <div
+              class="flex items-center left-0 ml-15.5 my-4 text-gray-400  xl:gap-10 max-xl:gap-5 text-sm max-w-[420px]:space-x-3 max-w-[420px]:text-base ">
+              <div
+                class="flex items-center space-x-1 hover:text-blue-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 10h8m-8 4h6M21 12c0 4.418-4.03 8-9 8-1.235 0-2.407-.184-3.447-.517L3 20l1.517-4.553C3.184 14.407 3 13.235 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span class="max-[500px]:text-sm">25.5K</span>
+              </div>
+
+              <!-- Retweet -->
+              <div
+                class="flex items-center space-x-1  hover:text-green-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 1l4 4-4 4M21 5H7a4 4 0 00-4 4v1m0 0L1 14l4 4m-4-4h14a4 4 0 004-4v-1" />
+                </svg>
+                <span>5.2K</span>
+              </div>
+
+              <!-- Like (Heart) -->
+              <div
+                class="flex items-center space-x-1  hover:text-pink-600 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <span>125.6K</span>
+              </div>
+
+              <!-- Views (Bar Chart) -->
+              <div
+                class="flex items-center space-x-1  hover:text-blue-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 21v-7m4 7v-4m4 4V3m4 18v-10m4 10v-6" />
+                </svg>
+                <span>17M</span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="post h sm:w-fit border-b-1 border-gray-700">
+          <div class="image mx-4 my-3 flex">
+            <img class="w-9 h-9 rounded-full"
+              src="https://i.pinimg.com/736x/21/a0/6c/21a06c4dbd317f4d60c1ad55b6cd6488.jpg" alt="logo" />
+            <div class="">
+              <div>
+                <span class="text-white hover:underline font-bold mx-2">Eunovie</span><span
+                  class="text-gray-500 max-[500px]:text-sm">@conservietor · Nov 29, 2024</span>
+              </div>
+              <div class="mx-2 max-[320px]:text-sm text-white">
+                <p class="line-clamp-2" id="text">
+                  Brad Pitt once said *‘The Assassination of Jesse James by the Coward Robert Ford’* was his finest work
+                  — a slow-burn masterpiece that critics love but many missed.
+                  If you haven’t seen it, you’re sleeping on one of Pitt’s best performances.</p>
+                <button id="toggleBtn" class="text-gray-400 ">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="content flex flex-col justify-start w">
+            <div class="image ml-15.5 w-fit mr-10 ">
+              <img class="rounded-xl" src="https://i.pinimg.com/736x/ac/8e/b5/ac8eb5c03207634e6f238aed75ef0851.jpg"
+                alt="" />
+            </div>
+            <div
+              class="flex items-center left-0 ml-15.5 my-4 text-gray-400  xl:gap-10 max-xl:gap-5 text-sm max-w-[420px]:space-x-3 ">
+              <div
+                class="flex items-center space-x-1 hover:text-blue-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 10h8m-8 4h6M21 12c0 4.418-4.03 8-9 8-1.235 0-2.407-.184-3.447-.517L3 20l1.517-4.553C3.184 14.407 3 13.235 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span class="">987</span>
+              </div>
+
+              <!-- Retweet -->
+              <div
+                class="flex items-center space-x-1  hover:text-green-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 1l4 4-4 4M21 5H7a4 4 0 00-4 4v1m0 0L1 14l4 4m-4-4h14a4 4 0 004-4v-1" />
+                </svg>
+                <span>56</span>
+              </div>
+
+              <!-- Like (Heart) -->
+              <div
+                class="flex items-center space-x-1  hover:text-pink-600 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <span>7.8K</span>
+              </div>
+
+              <!-- Views (Bar Chart) -->
+              <div
+                class="flex items-center space-x-1  hover:text-blue-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 21v-7m4 7v-4m4 4V3m4 18v-10m4 10v-6" />
+                </svg>
+                <span>990K</span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="post h sm:w-fit border-b-1 border-gray-700">
+          <div class="image mx-4 my-3 flex">
+            <img class="w-9 h-9 rounded-full"
+              src="https://i.pinimg.com/736x/b5/94/60/b59460c02a4302367d20d5914b3dda78.jpg" alt="logo" />
+            <div class="">
+              <div>
+                <span class="text-white hover:underline font-bold mx-2">Recordlords</span><span
+                  class="text-gray-500 max-[500px]:text-sm">@Recordlords · Feb 21, 2025</span>
+              </div>
+              <div class="mx-2 max-[320px]:text-sm text-white">
+                <p class="line-clamp-2" id="text">
+                  Kendrick Lamar just swept the 2025 Grammys with a single song—“Not Like Us” winning all five of its
+                  nominations 🏆🔥
+                  It snagged Song of the Year, Record of the Year, Best Rap Performance, Best Rap Song, and Best Music
+                  Video.
+                  A historic achievement—a diss track making Grammy history!
+                  If you haven’t seen it, you’re sleeping on one of Pitt’s best performances.</p>
+                <button id="toggleBtn" class="text-gray-400 ">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="content flex flex-col justify-start w">
+            <div class="image ml-15.5 w-fit mr-10 ">
+              <img class="rounded-xl" src="https://i.pinimg.com/1200x/7a/bb/d6/7abbd690729ed2ec7358947286f5434c.jpg"
+                alt="" />
+            </div>
+            <div
+              class="flex items-center left-0 ml-15.5 my-4 text-gray-400  xl:gap-10 max-xl:gap-5 text-sm max-w-[420px]:space-x-3 ">
+              <div
+                class="flex items-center space-x-1 hover:text-blue-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 10h8m-8 4h6M21 12c0 4.418-4.03 8-9 8-1.235 0-2.407-.184-3.447-.517L3 20l1.517-4.553C3.184 14.407 3 13.235 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span class="">10.1K</span>
+              </div>
+
+              <!-- Retweet -->
+              <div
+                class="flex items-center space-x-1  hover:text-green-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 1l4 4-4 4M21 5H7a4 4 0 00-4 4v1m0 0L1 14l4 4m-4-4h14a4 4 0 004-4v-1" />
+                </svg>
+                <span>22.2K</span>
+              </div>
+
+              <!-- Like (Heart) -->
+              <div
+                class="flex items-center space-x-1  hover:text-pink-600 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <span>150K</span>
+              </div>
+
+              <!-- Views (Bar Chart) -->
+              <div
+                class="flex items-center space-x-1  hover:text-blue-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 21v-7m4 7v-4m4 4V3m4 18v-10m4 10v-6" />
+                </svg>
+                <span>22M</span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="post h sm:w-fit border-b-1 border-gray-700">
+          <div class="image mx-4 my-3 flex">
+            <img class="w-9 h-9 rounded-full"
+              src="https://i.pinimg.com/736x/93/8d/94/938d94d57892253a4fdda5767408d477.jpg" alt="logo" />
+            <div class="">
+              <div>
+                <span class="text-white hover:underline font-bold mx-2">Thegreat USA</span><span
+                  class="text-gray-500 max-[500px]:text-sm">@ThegreatUSA · Apr 25, 2025</span>
+              </div>
+              <div class="mx-2 max-[320px]:text-sm text-white">
+                <p class="line-clamp-2" id="text">
+                  President Trump slaps 60% tariffs on all Chinese imports, plus 50% on steel & copper.
+                  China exports to the U.S. now face their highest duties in history.
+                  Tariff revenue surges, but experts warn of rising prices and trade war escalation in 2026 </p>
+                <button id="toggleBtn" class="text-gray-400 ">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="content flex flex-col justify-start w">
+            <div class="image ml-15.5 w-fit mr-10 ">
+              <img class="rounded-xl" src="https://i.pinimg.com/1200x/5d/cd/17/5dcd17801b60278d0d2bce10c9e4cb6b.jpg"
+                alt="" />
+            </div>
+            <div
+              class="flex items-center left-0 ml-15.5 my-4 text-gray-400  xl:gap-10 max-xl:gap-5 text-sm max-w-[420px]:space-x-3 ">
+              <div
+                class="flex items-center space-x-1 hover:text-blue-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 10h8m-8 4h6M21 12c0 4.418-4.03 8-9 8-1.235 0-2.407-.184-3.447-.517L3 20l1.517-4.553C3.184 14.407 3 13.235 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span class="">50.5K</span>
+              </div>
+
+              <!-- Retweet -->
+              <div
+                class="flex items-center space-x-1  hover:text-green-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 1l4 4-4 4M21 5H7a4 4 0 00-4 4v1m0 0L1 14l4 4m-4-4h14a4 4 0 004-4v-1" />
+                </svg>
+                <span>29.8K</span>
+              </div>
+
+              <!-- Like (Heart) -->
+              <div
+                class="flex items-center space-x-1  hover:text-pink-600 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <span>141K</span>
+              </div>
+
+              <!-- Views (Bar Chart) -->
+              <div
+                class="flex items-center space-x-1  hover:text-blue-400 transition ease-in duration-100 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 21v-7m4 7v-4m4 4V3m4 18v-10m4 10v-6" />
+                </svg>
+                <span>12M</span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="third lg:w-[30%] md:w-[35%] overflow-y-scroll hidden min-[1000px]:block">
+      <div
+        class="search h-[48px] borderz border-gray-700 bg-black hover:bg-gray-950 rounded-full mt-2 xl:w-3/4 lg:w-[90%] flex items-center mx-auto">
+        <div class="h-8 w-8 flex items-center justify-center px-2">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5 saturate-100" viewBox="0 0 30 30">
+            <path
+              d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z">
+            </path>
+          </svg>
+        </div>
+        <input type="text" class="w-28 bg-none border-none outline-none text-white py-2" placeholder="Search" />
+      </div>
+      <div class="my-5 borderz border-gray-700 xl:w-3/4 lg:w-[90%] max-w-[978px]:hidden mx-auto h-75 rounded-2xl">
+        <div class="w-full text-2xl font-semibold text-white px-4 mt-2">
+          <h1>You might like</h1>
+        </div>
+        <ul class="grid columns-1 mt-5">
+          <li>
+            <div class="px-4 py-2 flex items-center">
+              <div class="">
+                <img class="h-10 w-10 rounded-md"
+                  src="https://pbs.twimg.com/profile_images/1754606338460487681/bWupXdxo_400x400.jpg"
+                  alt="Google Logo" />
+              </div>
+              <div class="w-4/5 px-2 flex justify-between items-center">
+                <div class="">
+                  <a class="font-bold flex items-center text-white text-[16px] hover:underline"
+                    href="https://x.com/Google">Google
+                    <svg viewBox="0 0 22 22" aria-label="Verified account" role="img"
+                      class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i h-5 w-5 ml-1 fill-[#46b0f7]"
+                      data-testid="icon-verified">
+                      <g>
+                        <path
+                          d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z">
+                        </path>
+                      </g>
+                    </svg>
+                  </a>
+                  <p class="text-gray-400 opacity-60 text-2 flex text-[14px]">
+                    @Google
+                  </p>
+                </div>
+                <div>
+                  <button
+                    class="w-23 py-1.5 dark:bg-white dark:text-black rounded-full flex items-center justify-center">
+                    Follow
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="px-4 py-2 flex items-center">
+              <div class="">
+                <img class="h-10 w-10 rounded-md"
+                  src="https://pbs.twimg.com/profile_images/1669780523911110656/K9gaaM1g_400x400.jpg"
+                  alt="elon musk Logo" />
+              </div>
+              <div class="w-4/5 px-2 flex justify-between items-center">
+                <div class="">
+                  <a class="font-bold flex items-center text-white text-[16px] hover:underline"
+                    href="https://x.com/CNN">CNN
+                    <svg viewBox="0 0 22 22" aria-label="Verified account" role="img"
+                      class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i h-5 w-5 ml-1 fill-[#46b0f7]"
+                      data-testid="icon-verified">
+                      <g>
+                        <path
+                          d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z">
+                        </path>
+                      </g>
+                    </svg>
+                  </a>
+                  <p class="text-gray-400 opacity-60 text-2 flex text-[14px]">
+                    @CNN
+                  </p>
+                </div>
+                <div>
+                  <button
+                    class="w-23 py-1.5 dark:bg-white dark:text-black rounded-full flex items-center justify-center">
+                    Follow
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="px-4 py-2 flex items-center">
+              <div class="">
+                <img class="h-10 w-10 rounded-md"
+                  src="https://pbs.twimg.com/profile_images/1915882040353837056/VbhPvueq_400x400.jpg"
+                  alt="Google Logo" />
+              </div>
+              <div class="w-4/5 px-2 flex justify-between items-center">
+                <div class="">
+                  <a class="font-bold flex items-center text-white text-[16px] hover:underline"
+                    href="https://x.com/YouTube">YouTube
+                    <svg viewBox="0 0 22 22" aria-label="Verified account" role="img"
+                      class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i h-5 w-5 ml-1 fill-[#46b0f7]"
+                      data-testid="icon-verified">
+                      <g>
+                        <path
+                          d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z">
+                        </path>
+                      </g>
+                    </svg>
+                  </a>
+                  <p class="text-gray-400 opacity-60 text-2 flex text-[14px]">
+                    @YouTube
+                  </p>
+                </div>
+                <div>
+                  <button
+                    class="w-23 py-1.5 dark:bg-white dark:text-black rounded-full flex items-center justify-center">
+                    Follow
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <p class="text-sm text-cyan-400 hover:underline cursor-pointer ml-4">
+            Show more
+          </p>
+        </ul>
+      </div>
+      <div
+        class="bg-black text-white xl:w-3/4 lg:w-[90%] p-4 rounded-xl borderz wfi space-y-4 mx-auto border-gray-700">
+        <h2 class="text-lg font-bold">What’s happening</h2>
+
+        <div class="space-y-1">
+          <p class="text-sm text-gray-400">Trending in India</p>
+          <p class="font-semibold">#galaxyseries</p>
+          <p class="text-sm text-gray-500">5,203 posts</p>
+        </div>
+
+        <div class="space-y-1">
+          <p class="text-sm text-gray-400">Travel · Trending</p>
+          <p class="font-semibold">Tesla</p>
+          <p class="text-sm text-gray-500">162K posts</p>
+        </div>
+
+        <div class="space-y-1">
+          <p class="text-sm text-gray-400">Trending in India</p>
+          <p class="font-semibold">#ronaldoteam</p>
+          <p class="text-sm text-gray-500">1,216 posts</p>
+        </div>
+
+        <div class="space-y-1">
+          <p class="text-sm text-gray-400">Entertainment · Trending</p>
+          <p class="font-semibold">#KatrinaKaif</p>
+          <p class="text-sm text-gray-500">2,593 posts</p>
+        </div>
+
+        <p class="text-sm text-cyan-400 hover:underline cursor-pointer">
+          Show more
+        </p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+
+  <script>
+    const text = document.getElementById("text");
+    const btn = document.getElementById("toggleBtn");
+    let expanded = false;
+
+    btn.addEventListener("click", () => {
+      expanded = !expanded;
+      if (expanded) {
+        text.classList.remove("line-clamp-2");
+        btn.innerText = "Read Less";
+      } else {
+        text.classList.add("line-clamp-2");
+        btn.innerText = "Read More";
+      }
+    });
+  </script>
+</body>
+
+</html>
